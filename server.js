@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const db = require('./config/mongoose');
 
+app.use('/', require('./routes/index'));
 const PORT = process.env.PORT || 5500;
 
 app.listen(PORT, (err) => {
