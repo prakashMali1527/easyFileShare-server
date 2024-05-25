@@ -1,9 +1,15 @@
 const express = require('express');
 const app = express();
 const db = require('./config/mongoose');
+const cors = require('cors');
+
+// allow cross-origin-cors-policy
+app.use(cors({
+    origin: 'http://127.0.0.1:5500',
+}));
 
 app.use('/', require('./routes/index'));
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, (err) => {
     if(err){
