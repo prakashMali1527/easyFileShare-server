@@ -8,6 +8,8 @@ require('dotenv').config();
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+app.use(express.static('./assets'));
+
 // allow cross-origin-cors-policy
 app.use(cors({
     origin: `http://127.0.0.1:5500`,
