@@ -1,8 +1,10 @@
 const express = require('express');
+require('dotenv').config();
+
+const PORT = process.env.PORT || 3000;
 const app = express();
 const db = require('./config/mongoose');
 const cors = require('cors');
-require('dotenv').config();
 
 // set ejs and views folder
 app.set('view engine', 'ejs');
@@ -10,13 +12,17 @@ app.set('views', './views');
 
 app.use(express.static('./assets'));
 
+// parse post data
+app.use(express.urlencoded());
+// parse json data
+app.use(express.json());
+
 // allow cross-origin-cors-policy
 app.use(cors({
     origin: `http://127.0.0.1:5500`,
 }));
 
 app.use('/', require('./routes/index'));
-const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, (err) => {
     if(err){
