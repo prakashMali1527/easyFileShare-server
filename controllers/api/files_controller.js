@@ -4,7 +4,6 @@ const { v4: uuid4 } = require('uuid');
 
 module.exports.handleUpload = function (req, res) {
     // store file
-    console.log('file controller');
     upload(req, res, async (err) => {
 
         if (err) {

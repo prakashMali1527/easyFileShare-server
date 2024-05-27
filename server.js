@@ -2,10 +2,15 @@ const express = require('express');
 const app = express();
 const db = require('./config/mongoose');
 const cors = require('cors');
+require('dotenv').config();
+
+// set ejs and views folder
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
 // allow cross-origin-cors-policy
 app.use(cors({
-    origin: 'http://127.0.0.1:5500',
+    origin: `http://127.0.0.1:5500`,
 }));
 
 app.use('/', require('./routes/index'));
