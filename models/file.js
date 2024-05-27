@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const fileSchema = new mongoose.Schema({
-    filename: {
+    fileName: {
         type: String,
         required: true
     },
@@ -17,10 +17,10 @@ const fileSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    sender: {
+    senderEmail: {
         type: String,
     },
-    receiver: {
+    receiverEmail: {
         type: String,
     }
 },{

@@ -13,7 +13,7 @@ module.exports.downloadPage = async function(req,res){
 
         return res.render('download',{
             uuid: file.uuid,
-            fileName: file.filename,
+            fileName: file.fileName,
             fileSize: file.size,
             downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}`
         });
