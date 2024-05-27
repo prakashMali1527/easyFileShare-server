@@ -1,11 +1,23 @@
 <div>
-    <h3>You received file from :- <%= senderEmail %>
-    </h3>
-    <p>Link expires in <%= expires %>
+    <p>Hi there,</p>
+    <p><a href="<%= senderEmail %>"><%= senderEmail %></a> has shared a file with you.
     </p>
-    <p><small>File size :- <%= size %> </small></p>
+    <p>
+        <span>
+            <strong>
+                <%=size%>
+            </strong> in total
+        </span> 
+        <span>
+            <strong>
+                Expires
+            </strong>
+             in <%=expires%>
+        </span>
+    </p>
     <p>Link :- <a href="<%= downloadLink %>">
             <%= downloadLink %>
         </a></p>
-    <p>Thank you!!!</p>
+    <p>Thank you for using easyFileShare services!!!</p>
+    <p>Good luck! Hope it works.</p>
 </div>
