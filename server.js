@@ -5,6 +5,11 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 const db = require('./config/mongoose');
 const cors = require('cors');
+require('dotenv').config();
+
+// set ejs and views folder
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
 // set ejs and views folder
 app.set('view engine', 'ejs');
