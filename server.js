@@ -23,9 +23,7 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 // allow cross-origin-cors-policy
-app.use(cors({
-    origin: `http://127.0.0.1:5500`,
-}));
+app.use(cors());
 
 app.use('/', require('./routes/index'));
 
