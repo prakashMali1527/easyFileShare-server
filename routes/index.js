@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', function (req, res) {
-    return res.send('<h1>Welcome to easyFileSharing</h1>');
+    return res.send('<h4>fileShare API testing :- <strong>Success! </strong> </h4>');
 })
 router.use('/api', require('./api/index'));
 router.use('/files', require('./show'));
