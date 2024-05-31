@@ -1,5 +1,5 @@
-easyFileShare-App 
-Visit this repo for the frontend part: https://github.com/prakashMali1527/easyFileShare-interface
+# easyFileShare-App 
+Visit this repo for the frontend part: [easyFileShare-interface](https://github.com/prakashMali1527/easyFileShare-interface)
 
 API's
 
